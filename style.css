@@ -1,0 +1,17 @@
+nav {
+  background-color: black;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.navbar__logo img {
+  width: 75px;
+  height: 75px;
+}
+
+.navbar__menu {
+  list-style: none;
+  display: flex;
+}
