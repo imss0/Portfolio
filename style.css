@@ -1,13 +1,43 @@
 :root {
+  /*Margin*/
   --base-margin: 8px;
+
+  /* color*/
+  --color-black: #000000;
+  --color-dark-grey: #4d4d4d;
+  --color-light-grey: #7c7979;
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-lime: #c1ff72;
+  --color-purple: #8c52ff;
+  --color-violet: #cb6ce6;
+  --color-lightblue: #5ce1e6;
+  --color-turkey: #0097b2;
+  --color-skyblue: #0cc0df;
+
+  /*Font size*/
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 12px;
+
+  /*Font weight*/
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 nav {
-  background-color: black;
+  background-color: var(--color-black);
   height: 10vh;
   display: flex;
   justify-content: space-between;
-  color: white;
+  color: var(--color-white);
 }
 
 .navbar__logo img {
@@ -35,7 +65,6 @@ nav {
 .skill__container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  border: 1px solid skyblue;
 }
 
 .skill__logo {
