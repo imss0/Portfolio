@@ -23,21 +23,24 @@
   --font-small: 12px;
 
   /*Font weight*/
-  --weight-bold: 700;
+  --weight-bold: 900;
   --weight-semi-bold: 600;
   --weight-regular: 400;
 }
 
 * {
   box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 nav {
-  background-color: var(--color-black);
   height: 10vh;
   display: flex;
   justify-content: space-between;
-  color: var(--color-white);
+  padding-left: var(--base-margin);
+  padding-right: var(--base-margin);
 }
 
 .navbar__logo img {
@@ -53,6 +56,42 @@ nav {
 
 .navbar__menu__item {
   margin: var(--base-margin);
+}
+
+#about {
+  text-align: center;
+}
+
+.about__description {
+  font-size: large;
+}
+
+.about__contury {
+  font-size: medium;
+}
+
+.about__contact {
+  background-color: var(--color-lightblue);
+  border: 1px solid var(--color-skyblue);
+  border-radius: 5px;
+  height: 50px;
+  width: 150px;
+  font-weight: var(--weight-bold);
+  font-size: large;
+  color: var(--color-black);
+}
+
+.about__contact:hover {
+  background-color: var(--color-lime);
+  border: 1px solid var(--color-skyblue);
+  border-radius: 5px;
+  height: 50px;
+  width: 150px;
+  font-weight: var(--weight-bold);
+  font-size: large;
+  color: var(--color-black);
+  cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat927.ani),
+    url(https://cur.cursors-4u.net/nature/nat-10/nat927.png), auto;
 }
 
 .skills__container {
