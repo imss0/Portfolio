@@ -17,15 +17,27 @@
   --color-skyblue: #0cc0df;
 
   /*Font size*/
+  --font-xxlarge: 80px;
   --font-large: 48px;
-  --font-medium: 28px;
-  --font-regular: 18px;
-  --font-small: 12px;
+  --font-medium: 36px;
+  --font-regular: 24px;
+  --font-small: 18px;
 
   /*Font weight*/
   --weight-bold: 900;
   --weight-semi-bold: 600;
   --weight-regular: 400;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 * {
@@ -37,7 +49,10 @@
 
 nav {
   height: 10vh;
+  width: 100%;
   display: flex;
+  position: fixed;
+  top: 0;
   justify-content: space-between;
   padding-left: var(--base-margin);
   padding-right: var(--base-margin);
@@ -51,6 +66,8 @@ nav {
 
 .navbar__menu {
   list-style: none;
+  cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat927.ani),
+    url(https://cur.cursors-4u.net/nature/nat-10/nat927.png), auto;
   display: flex;
 }
 
@@ -60,6 +77,17 @@ nav {
 
 #about {
   text-align: center;
+  margin-top: 10vh;
+  height: 90vh;
+}
+
+#about h1 {
+  font-size: xx-large;
+  width: 50%;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
 }
 
 .about__description {
