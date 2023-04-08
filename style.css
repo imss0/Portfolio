@@ -1,6 +1,6 @@
 :root {
   /*Margin*/
-  --base-margin: 8px;
+  --base-margin: 12px;
 
   /* color*/
   --color-black: #000000;
@@ -17,11 +17,10 @@
   --color-skyblue: #0cc0df;
 
   /*Font size*/
-  --font-xxlarge: 80px;
-  --font-large: 48px;
-  --font-medium: 36px;
-  --font-regular: 24px;
-  --font-small: 18px;
+  --font-large: 36px;
+  --font-medium: 24px;
+  --font-regular: 16px;
+  --font-small: 12px;
 
   /*Font weight*/
   --weight-bold: 900;
@@ -47,6 +46,11 @@
   color: var(--color-white);
 }
 
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+}
+
 nav {
   height: 10vh;
   width: 100%;
@@ -54,6 +58,7 @@ nav {
   position: fixed;
   top: 0;
   justify-content: space-between;
+  align-items: center;
   padding-left: var(--base-margin);
   padding-right: var(--base-margin);
 }
@@ -69,10 +74,21 @@ nav {
   cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat927.ani),
     url(https://cur.cursors-4u.net/nature/nat-10/nat927.png), auto;
   display: flex;
+  margin-right: var(--base-margin);
 }
 
 .navbar__menu__item {
   margin: var(--base-margin);
+  padding: var(--base-margin);
+  border-radius: 5px;
+}
+
+.navbar__menu__item:hover {
+  background-color: var(--color-violet);
+}
+
+.navbar__menu__item.active {
+  background-color: var(--color-lime);
 }
 
 #about {
@@ -82,8 +98,7 @@ nav {
 }
 
 #about h1 {
-  font-size: xx-large;
-  width: 50%;
+  width: 68%;
   animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
