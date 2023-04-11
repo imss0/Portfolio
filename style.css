@@ -17,10 +17,11 @@
   --color-skyblue: #0cc0df;
 
   /*Font size*/
-  --font-large: 36px;
-  --font-medium: 24px;
-  --font-regular: 16px;
+  --font-xl: 32px;
+  --font-large: 24px;
+  --font-medium: 18px;
   --font-small: 12px;
+  --font-xs: 10px;
 
   /*Font weight*/
   --weight-bold: 900;
@@ -48,9 +49,15 @@
 
 /* Typography */
 h1 {
-  font-size: var(--font-large);
+  font-size: var(--font-xl);
+  text-align: center;
 }
 
+h2 {
+  font-size: var(--font-medium);
+}
+
+/*nav*/
 nav {
   height: 10vh;
   width: 100%;
@@ -89,28 +96,40 @@ nav {
 
 .navbar__menu__item.active {
   background-color: var(--color-lime);
+  color: var(--color-black);
 }
 
+/*about*/
+
 #about {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 10vh;
+  padding: 40px;
   height: 90vh;
 }
 
-#about h1 {
-  width: 68%;
-  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-}
+@media (min-width: 768px) {
+  #about h1 {
+    width: 668px;
+    animation: typing 3s steps(36), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    display: inline-block;
+  }
 
-.about__description {
-  font-size: large;
-}
+  .about__description {
+    width: 700px;
+    text-align: left;
+  }
 
-.about__contury {
-  font-size: medium;
+  .about__description div {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .about__contact {
@@ -119,8 +138,9 @@ nav {
   border-radius: 5px;
   height: 50px;
   width: 150px;
+  margin-top: var(--base-margin);
   font-weight: var(--weight-bold);
-  font-size: large;
+  font-size: var(--font-medium);
   color: var(--color-black);
 }
 
@@ -135,6 +155,10 @@ nav {
   color: var(--color-black);
   cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat927.ani),
     url(https://cur.cursors-4u.net/nature/nat-10/nat927.png), auto;
+}
+
+#skills {
+  height: 90vh;
 }
 
 .skills__container {
@@ -156,4 +180,12 @@ nav {
 .skill__logo {
   width: 64px;
   height: 64px;
+}
+
+#projects {
+  height: 90vh;
+}
+
+#contact {
+  height: 90vh;
 }
