@@ -17,6 +17,7 @@
   --color-skyblue: #0cc0df;
 
   /*Font size*/
+  --font-xxl: 48px;
   --font-xl: 32px;
   --font-large: 24px;
   --font-medium: 18px;
@@ -306,6 +307,7 @@ figcaption {
   justify-content: center;
   font-size: var(--font-medium);
   font-weight: var(--weight-bold);
+  transition: all 0.2s ease-in;
 }
 
 .project__back__tech:before {
@@ -321,3 +323,22 @@ figcaption {
 }
 
 /* Contact */
+.contact__title {
+  font-size: var(--font-xxl);
+  font-weight: var(--weight-bold);
+}
+
+.contact__email {
+  font-size: var(--font-xl);
+  font-weight: var(--weight-bold);
+}
+
+.contact__links {
+  font-size: var(--font-xxl);
+}
+
+.contact__links i:hover {
+  transform: scale(1.2);
+  color: var(--color-violet);
+  transition: all 0.2s ease-in;
+}
