@@ -328,7 +328,11 @@ figcaption {
 }
 
 .contact__links {
+  margin: 0px auto;
   font-size: var(--font-xl);
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .contact__links i:hover {
