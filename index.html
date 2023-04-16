@@ -30,10 +30,10 @@
         <img src="/asset/logo_dark.png" />
       </div>
       <ul class="navbar__menu">
-        <a href="#about"><li class="navbar__menu__item active">Home</li></a>
-        <a href="#skills"><li class="navbar__menu__item">Skills</li></a>
-        <a href="#projects"><li class="navbar__menu__item">Projects</li></a>
-        <a href="#contact"><li class="navbar__menu__item">Contact</li></a>
+        <li class="navbar__menu__item active" data-link="#about">Home</li>
+        <li class="navbar__menu__item" data-link="#skills">Skills</li>
+        <li class="navbar__menu__item" data-link="#projects">Projects</li>
+        <li class="navbar__menu__item" data-link="#contact">Contact</li>
       </ul>
       <!--Hamburger-->
       <button class="navbar__btn"><i class="fa-solid fa-bars"></i></button>
@@ -41,8 +41,7 @@
     <!-- About -->
     <section id="about">
       <div class="about__title">
-        <span id="demo"></span>
-        <span id="cursor">|</span>
+        <span id="typing"></span><span id="cursor">|</span>
       </div>
       <h2 class="about__description">
         • Open to learn new technologies and to adapt them to products.
@@ -65,7 +64,7 @@
           🇰🇷 Came from Seoul, Korea
         </div>
       </h2>
-      <a href="#contact"><button class="about__contact">Contact me</button></a>
+      <button class="about__contact" data-link="#contact">Contact me</button>
     </section>
     <!-- Skills -->
     <section id="skills">
@@ -244,5 +243,9 @@
         </a>
       </div>
     </section>
+    <!--Arrow up-->
+    <button class="arrow-btn">
+      <i class="fas fa-arrow-up"></i>
+    </button>
   </body>
 </html>

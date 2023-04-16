@@ -65,7 +65,7 @@ a {
   text-decoration: none;
 }
 
-/*nav*/
+/*nav - common*/
 nav {
   height: 10vh;
   width: 100%;
@@ -86,7 +86,7 @@ section {
   min-height: 90vh;
   padding-top: 12vh;
   text-align: center;
-  margin-left: 20px;
+  margin: 0px auto;
 }
 
 .navbar__logo img {
@@ -122,6 +122,7 @@ section {
 .navbar__btn {
   position: absolute;
   right: 32px;
+  margin-right: 10px;
   display: none;
   font-size: var(--font-large);
   color: var(--color-white);
@@ -144,7 +145,7 @@ section {
 }
 
 .about__title {
-  font-size: 4vw;
+  font-size: 3vw;
 }
 
 .about__description {
@@ -190,7 +191,8 @@ section {
 /* skills */
 .skills__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   margin: 80px 0;
 }
@@ -204,9 +206,9 @@ section {
 }
 
 .skill {
-  width: 30vw;
+  width: 30%;
+  min-width: 240px;
   display: inline-block;
-  margin: 0px;
 }
 
 .skill__title {
@@ -216,7 +218,7 @@ section {
 }
 .skill__container {
   display: grid;
-  justify-content: center;
+  justify-items: center;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -225,7 +227,7 @@ section {
 }
 
 .skill__logo {
-  margin: 5px 5px 20px 0px;
+  margin: 2px 2px 20px 0px;
   background-color: var(--color-light-white);
   padding: 5px;
   border-radius: 10px;
@@ -348,6 +350,27 @@ figcaption {
   transition: all 0.2s ease-in;
 }
 
+.arrow-btn {
+  position: fixed;
+  background-color: var(--color-violet);
+  color: var(--color-white);
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  border: none;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease-in;
+}
+
+.arrow-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* For below 768px screen width */
 @media (max-width: 768px) {
   section {
@@ -376,6 +399,7 @@ figcaption {
   .about__description {
     width: 80vw;
     text-align: left;
+    font-size: var(--font-small);
   }
 
   .about__description div {
@@ -405,7 +429,7 @@ figcaption {
 /* For below 480px screen width */
 @media (max-width: 480px) {
   section {
-    margin-right: 0;
+    margin: 0px auto;
   }
 
   #about h1 {
@@ -426,7 +450,6 @@ figcaption {
   .skills__container {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   #contact {
