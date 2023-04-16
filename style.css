@@ -4,29 +4,19 @@
 
   /* color*/
   --color-black: #000000;
-  --color-dark-grey: #4d4d4d;
   --color-light-grey: #7c7979;
   --color-white: #ffffff;
-  --color-light-white: #eeeeee;
-  --color-dark-white: #bdbdbd;
+  --color-dark-white: #eeeeee;
   --color-lime: #c1ff72;
   --color-purple: #8c52ff;
   --color-violet: #cb6ce6;
-  --color-lightblue: #5ce1e6;
-  --color-turkey: #0097b2;
-  --color-skyblue: #0cc0df;
 
   /*Font size*/
   --font-xl: 32px;
   --font-large: 24px;
   --font-medium: 18px;
-  --font-small: 12px;
+  --font-small: 14px;
   --font-xs: 10px;
-
-  /*Font weight*/
-  --weight-bold: 800;
-  --weight-semi-bold: 600;
-  --weight-regular: 400;
 }
 
 @keyframes blink {
@@ -43,7 +33,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Noto Sans", sans-serif;
   color: var(--color-white);
 }
 
@@ -59,6 +49,8 @@ h1 {
 
 h2 {
   font-size: var(--font-medium);
+  font-weight: 400;
+  line-height: 180%;
 }
 
 a {
@@ -83,7 +75,7 @@ nav {
 /*section - common*/
 section {
   max-width: 1080px;
-  min-height: 90vh;
+  min-height: 80vh;
   padding-top: 12vh;
   text-align: center;
   margin: 0px auto;
@@ -116,13 +108,13 @@ section {
 .navbar__menu__item.active {
   background-color: var(--color-lime);
   color: var(--color-black);
-  font-weight: var(--weight-bold);
+  font-weight: 700;
 }
 
 .navbar__btn {
   position: absolute;
   right: 32px;
-  margin-right: 10px;
+  margin-right: var(--base-margin);
   display: none;
   font-size: var(--font-large);
   color: var(--color-white);
@@ -139,17 +131,17 @@ section {
 }
 
 #cursor {
-  font-size: 4vw;
   display: inline;
   animation: blink 0.7s infinite;
 }
 
 .about__title {
-  font-size: 3vw;
+  font-size: 4vw;
+  font-weight: 900;
 }
 
 .about__description {
-  width: 700px;
+  width: 750px;
   text-align: left;
 }
 
@@ -164,13 +156,13 @@ section {
 }
 
 .about__contact {
-  background-color: var(--color-lightblue);
-  border: 1px solid var(--color-skyblue);
+  background-color: var(--color-violet);
+  border: 1px solid var(--color-light-grey);
   border-radius: 5px;
   height: 50px;
   width: 150px;
   margin-top: var(--base-margin);
-  font-weight: var(--weight-bold);
+  font-weight: 600;
   font-size: var(--font-medium);
   color: var(--color-black);
 }
@@ -181,7 +173,7 @@ section {
   border-radius: 5px;
   height: 50px;
   width: 150px;
-  font-weight: var(--weight-bold);
+  font-weight: 700;
   font-size: large;
   color: var(--color-black);
   cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat927.ani),
@@ -198,7 +190,8 @@ section {
 }
 
 #skills {
-  padding: 10px;
+  padding: var(--base-margin);
+  padding-top: 10vh;
 }
 
 #skills > h1 {
@@ -213,7 +206,7 @@ section {
 
 .skill__title {
   font-size: var(--font-medium);
-  font-weight: var(--weight-bold);
+  font-weight: 700;
   margin-bottom: var(--base-margin);
 }
 .skill__container {
@@ -228,7 +221,7 @@ section {
 
 .skill__logo {
   margin: 2px 2px 20px 0px;
-  background-color: var(--color-light-white);
+  background-color: var(--color-dark-white);
   padding: 5px;
   border-radius: 10px;
   width: 72px;
@@ -236,7 +229,7 @@ section {
 }
 
 .skill__logo img {
-  background-color: var(--color-light-white);
+  background-color: var(--color-dark-white);
 }
 
 figcaption {
@@ -273,7 +266,7 @@ figcaption {
   z-index: 1;
   top: 0;
   font-size: var(--font-large);
-  font-weight: var(--weight-bold);
+  font-weight: 800;
   color: var(--color-black);
   margin: var(--base-margin);
 }
@@ -289,19 +282,9 @@ figcaption {
   height: 30px;
   margin: 2px;
   border: none;
-  box-shadow: 1px 1px var(--color-dark-grey);
-}
-
-.project__link:nth-child(1) {
-  background-color: var(--color-turkey);
-}
-
-.project button:nth-child(2) {
+  font-weight: 600;
   background-color: var(--color-purple);
-}
-
-.project button:nth-child(3) {
-  background-color: var(--color-skyblue);
+  box-shadow: 1px 1px var(--color-light-grey);
 }
 
 .project__back {
@@ -313,8 +296,12 @@ figcaption {
   flex-direction: column;
   justify-content: center;
   font-size: var(--font-medium);
-  font-weight: var(--weight-bold);
+  font-weight: 600;
   transition: all 0.2s ease-in;
+}
+
+.project__back__description {
+  color: var(--color-lime);
 }
 
 .project__back__tech:before {
@@ -332,12 +319,12 @@ figcaption {
 /* Contact */
 .contact__title {
   font-size: var(--font-xl);
-  font-weight: var(--weight-bold);
+  font-weight: 900;
 }
 
 .contact__email {
   font-size: var(--font-large);
-  font-weight: var(--weight-bold);
+  font-weight: 600;
 }
 
 .contact__links {
@@ -392,8 +379,18 @@ figcaption {
     flex-direction: column;
     text-align: center;
     background-color: var(--color-black);
-    width: 100vw;
+    width: 100%;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
+    padding-left: 0px;
+    margin: 0px;
+  }
+
+  .navbar__menu.open li:hover {
+    background-color: var(--color-violet);
   }
 
   .about__description {
@@ -418,10 +415,14 @@ figcaption {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
+    margin-top: var(--base-margin);
   }
 
   .project__front {
+    width: 100%;
+  }
+
+  .project__back {
     width: 100%;
   }
 }
@@ -432,8 +433,8 @@ figcaption {
     margin: 0px auto;
   }
 
-  #about h1 {
-    font-size: 15px;
+  #typing {
+    font-weight: 900;
   }
 
   .about__description {
@@ -442,7 +443,7 @@ figcaption {
 
   .about__description__mobile {
     display: block;
-    width: 320px;
+    max-width: 360px;
     font-size: var(--font-small);
     text-align: left;
   }
