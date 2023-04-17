@@ -329,6 +329,8 @@ figcaption {
 }
 
 .contact__email__text {
+  background-color: transparent;
+  border: none;
   font-size: var(--font-large);
   font-weight: 600;
   margin-bottom: 0px;
@@ -337,7 +339,7 @@ figcaption {
 #copy__email {
   background-color: transparent;
   color: var(--color-violet);
-  font-size: var(--font-small);
+  font-size: var(--font-xs);
   margin-top: 0px;
 }
 
