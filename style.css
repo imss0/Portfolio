@@ -323,8 +323,22 @@ figcaption {
 }
 
 .contact__email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__email__text {
   font-size: var(--font-large);
   font-weight: 600;
+  margin-bottom: 0px;
+}
+
+#copy__email {
+  background-color: transparent;
+  color: var(--color-violet);
+  font-size: var(--font-small);
+  margin-top: 0px;
 }
 
 .contact__links {
@@ -462,7 +476,12 @@ figcaption {
   }
 
   .contact__title,
-  .contact__email {
+  .contact__email__text {
     font-size: var(--font-large);
+  }
+
+  .arrow-btn {
+    bottom: 16px;
+    right: 4px;
   }
 }

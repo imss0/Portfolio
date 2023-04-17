@@ -105,3 +105,17 @@ sections.forEach((section) => observer.observe(section));
 window.addEventListener("scroll", () => {
   selectNavItem(navItems[selectedNavIndex]);
 });
+
+/* copy to clipboard*/
+const clipboard = new ClipboardJS(".contact__email__text");
+clipboard.on("success", function (e) {
+  document.getElementById("copy__email").innerText = "Copied!";
+  setTimeout(function () {
+    document.getElementById("copy__email").innerText = "Click email to copy";
+  }, 1200);
+  e.clearSelection();
+});
+
+clipboard.on("error", function (e) {
+  alert("copy failed");
+});

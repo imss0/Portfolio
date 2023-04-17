@@ -227,7 +227,13 @@
     <!-- Contact -->
     <section id="contact">
       <h1 class="contact__title">Let's have a chat!</h1>
-      <h2 class="contact__email">shlim0410@gmail.com</h2>
+      <h2
+        class="contact__email__text"
+        data-clipboard-text="shlim0410@gmail.com"
+      >
+        shlim0410@gmail.com
+      </h2>
+      <p id="copy__email">Click email to copy</p>
       <div class="contact__links">
         <a href="https://github.com/imss0/" target="_blank">
           <i class="fab fa-github"></i>
@@ -247,5 +253,6 @@
     <button class="arrow-btn">
       <i class="fa-solid fa-circle-chevron-up"></i>
     </button>
+    <script src="node_modules/clipboard/dist/clipboard.min.js"></script>
   </body>
 </html>
