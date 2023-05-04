@@ -230,6 +230,8 @@ section {
 
 .skill__logo img {
   background-color: var(--color-dark-white);
+  width: 64px;
+  height: 64px;
 }
 
 figcaption {
