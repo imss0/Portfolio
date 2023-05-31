@@ -17,6 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/5cb2bde8d8.js"
       crossorigin="anonymous"
@@ -264,7 +268,11 @@
     </section>
     <!-- Contact -->
     <section id="contact">
-      <h1 class="contact__title">Let's have a chat!</h1>
+      <a
+        href=""
+        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/shlim0410/30min'});return false;"
+        ><div class="contact__title">Click to schedule a coffee chat ☕</div></a
+      >
       <button
         class="contact__email__text"
         data-clipboard-text="shlim0410@gmail.com"
@@ -289,5 +297,10 @@
       <i class="fa-solid fa-circle-chevron-up"></i>
     </button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
   </body>
 </html>

@@ -13,7 +13,7 @@
 
   /*Font size*/
   --font-xl: 32px;
-  --font-large: 24px;
+  --font-large: 22px;
   --font-medium: 18px;
   --font-small: 14px;
   --font-xs: 10px;
@@ -43,7 +43,6 @@ body {
 
 /* Typography */
 h1 {
-  font-size: var(--font-xl);
   text-align: center;
 }
 
@@ -319,9 +318,20 @@ figcaption {
 }
 
 /* Contact */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .contact__title {
-  font-size: var(--font-xl);
+  font-size: var(--font-large);
   font-weight: 900;
+  background-color: var(--color-violet);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: 400px;
 }
 
 .contact__email {
@@ -477,6 +487,16 @@ figcaption {
   #contact {
     width: 100vw;
     text-align: center;
+  }
+
+  .contact__title {
+    font-size: var(--font-medium);
+    font-weight: 900;
+    background-color: var(--color-violet);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 280px;
   }
 
   .contact__title,
